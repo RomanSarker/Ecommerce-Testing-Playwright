@@ -11,6 +11,18 @@ export class Registration{
     async clickOncreateAccountLink(){
         await this.locator.createAccountLink.click();
     }
+    async enterfullNameInput(fullname){
+        await this.locator.fullNameInput.fill(fullname);
+    }
+    async enteremailInput(email){
+        await this.locator.emailInput.fill(email);
+    }
+    async enterpasswordInput(password){
+        await this.locator.passwordInput.fill(password);
+    }
+    async clickOnbuttonSignUp(){
+        await this.locator.buttonSignUp.click();
+    }
 
 
     }
