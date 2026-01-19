@@ -12,6 +12,7 @@ export class Registration{
         await this.locator.createAccountLink.click();
     }
     async enterfullNameInput(fullname){
+        await this.page.waitForTimeout(5000);
         await this.locator.fullNameInput.fill(fullname);
     }
     async enteremailInput(email){
@@ -24,5 +25,9 @@ export class Registration{
         await this.locator.buttonSignUp.click();
     }
 
-
+    async isAccountIconVisible(){
+        await this.page.waitForTimeout(2000);
+      const isVisible= await this.locator.accountIconAfterLogin.isVisible();
+        return isVisible;
+    }
     }
