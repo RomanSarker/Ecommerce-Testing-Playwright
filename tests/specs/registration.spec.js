@@ -28,16 +28,16 @@ let registration, regLocator, utilities;
     //    await expect(regLocator.accountIconAfterLogin).toBeVisible();
         expect(await registration.isAccountIconVisible()).toBeTruthy();
     } )
-    test("UnSuccessfully Register with valid Information",async()=>{
-        await registration.clickOnaccountIcon();
-        await registration.clickOncreateAccountLink();
-        await registration.enterfullNameInput("Roman14");
-        await registration.enteremailInput(utilities.randomEmail());
-        await registration.enterpasswordInput("Password123");
-        await registration.clickOnbuttonSignUp()
-        await page.waitForTimeout(5000);
-        expect(page.url()).toEqual("https://demo.evershop.io/")
-    //    await expect(regLocator.accountIconAfterLogin).toBeVisible();
-        expect(await registration.isAccountIconVisible()).toBeTruthy();
-    } )
+    // test("UnSuccessfully Register with valid Information",async()=>{
+    //     await registration.clickOnaccountIcon();
+    //     await registration.clickOncreateAccountLink();
+    //     await registration.enterfullNameInput("Roman14");
+    //     await registration.enteremailInput(utilities.randomEmail());
+    //     await registration.enterpasswordInput("Password123");
+    //     await registration.clickOnbuttonSignUp()
+    //     await page.waitForTimeout(5000);
+    //     expect(page.url()).toEqual("https://demo.evershop.io/")
+    // //    await expect(regLocator.accountIconAfterLogin).toBeVisible();
+    //     expect(await registration.isAccountIconVisible()).toBeTruthy();
+    // } )
 })
